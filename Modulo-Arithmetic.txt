@@ -1,0 +1,55 @@
+Euclid's Division Lemma:
+for positive integers A and B, there exist integers q and r such that A = B*q + r where 0 <= r < B
+
+N1 = mod*q1 + r1
+N2 = mod*q2 + r2
+
+(N1 + N2) % mod = (mod*q1 + r1 + mod*q2 + r2) % mod
+                = (r1 + r2) % mod
+                = ((N1 % mod) + (N2 % mod)) % mod
+
+
+modulo-arithmetic:
+(a+b) % n = ((a % n) + (b % n)) % n
+(a*b) % n = ((a % n)*(b % n)) % n
+
+
+Euclidian algorithm to calculate GCD of A and B
+gcd(A, B) = {A (B = 0), gcd(B, A % B) otherwise}
+
+modulo-congruency:
+a and b are said to be congruent if:
+
+a % n = b % n
+
+eg. 13 and 41 (by 7)
+
+use case:
+
+(13+35+5) % 7 = 53 % 7 = 4
+
+this is true in all cases, even when multiplication is performed instead of addition
+
+
+multiplication under modulo:
+if a*b = c, then
+a (mod N) * b (mod N) is conogruent with c (mod N)
+
+this application can be used to handle long long integer so that computations dont go out of range
+eg. if a and b were long long and we had to find (a*b)%n, then this would come in handy
+
+another example: find the last digit of 2573*34268
+
+to find the last digit, (2573*34268) % 10
+= (3*8) % 10
+= 4
+
+
+exponentiation in modulo-arithmetic:
+
+if a is congruent with b, then a^k is congruent with b^k
+
+eg. find 29^10 (mod 3)
+
+29 mod 3 = 2
+answer: (2^10) % 3 = 1024 % 3 = (7 % 3) = 1
