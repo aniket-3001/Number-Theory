@@ -1,0 +1,9 @@
+Euclid's Division Lemma:
+for positive integers A and B, there exist integers q and r such that A = B*q + r where 0 <= r < B
+
+N1 = mod*q1 + r1
+N2 = mod*q2 + r2
+
+(N1 + N2) % mod = (mod*q1 + r1 + mod*q2 + r2) % mod
+                = (r1 + r2) % mod
+                = ((N1 % mod) + (N2 % mod)) % mod

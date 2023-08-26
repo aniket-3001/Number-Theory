@@ -1,0 +1,3 @@
+for an integer a and a prime number m, if gcd(a,m)=1, then a^(m-1) = 1 (mod m)
+=> a^(m-2) = a^(-1) (mod m)
+=> a^(-1) = a^(m-2) % m
